@@ -65,3 +65,15 @@
     padding-block: 2rem;
     letter-spacing: 1rem;
   }
+
+  .subtitle-container p {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 5rem;
+  }
+
+  .subtitle-container p:hover{
+    background-color: #022954;
+    color: white;
+    cursor: pointer;
+  }
