@@ -17,6 +17,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media only screen and (max-width: 720px) {
+  body{
+  font-size: 1.3rem;
+  }
+}
+
 .hero {
   margin: 3rem;
 }
@@ -82,7 +88,7 @@ nav i {
 
 /* CONTENTS PAGE STYLES START */
 
-.contents-header {
+.contents-header, .intro-page-header {
   padding: 5rem;
   display: flex;
   justify-content: space-between;
@@ -98,27 +104,25 @@ nav i {
 .contents-wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: 160rem;
-  justify-content: space-between;
+  width: 200rem;
+  justify-content: center;
   align-items: center;
 }
 
 .contents-wrapper div {
-  display: flex;
-  align-items: center;
   margin-bottom: 5rem;
   width: 70rem;
 }
 
-.contents-header  i {
+.contents-header i, .intro-page-header  i {
   font-size: 4rem;
   color: #022954;
-
 }
 
 .contents-wrapper div a {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .contents-container img {
@@ -126,3 +130,60 @@ nav i {
 }
 
 /* CONTENTS PAGE STYLES END */
+
+
+
+/* INTRO PAGE STYLES START */
+
+.intro-page-header {
+  position: absolute; 
+  right: 0;
+}
+
+.intro-pages-container {
+  width: 100vw;
+  display: flex;
+}
+
+.intro-image-container {
+  position: relative;
+}
+
+.intro-image-container img {
+  height: 116vh;
+  object-fit: cover;
+  width: 90rem;
+  object-position: -5rem;
+  padding-right: 5rem;
+  padding-left: 20rem;
+  border-right: .5rem dashed #022954;
+}
+
+.intro-image-container p {
+  position: absolute;
+  top: 50rem;
+  left: -16rem;
+  text-transform: uppercase;
+  font-style: italic;
+  transform: rotate(-90deg);
+  display: block;
+  letter-spacing: 1rem;
+}
+
+.intro-para-container {
+  padding: 10rem;
+}
+
+.intro-para-container h1 {
+  font-size: 18rem;
+  text-transform: uppercase;
+}
+
+.intro-para-container p {
+  text-align: justify;
+  font-size: 2.5rem;
+  width: 70rem;
+  line-height: 5rem;
+}
+
+/* INTRO PAGE STYLES END */
