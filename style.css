@@ -186,4 +186,105 @@ nav i {
   line-height: 5rem;
 }
 
+.secondpage {
+  display: none;
+  height: 100vh;
+  padding: 9rem;
+  display: none;
+}
+
+.page-active-block {
+display: none;
+}
+
+.page-active-flex {
+  display: flex;
+}
+
+.intro-second-para-container div > p:nth-child(2)  {
+  text-align: right;
+}
+
+.intro-second-para-container > div {
+  background-color: #354C7C;
+  color: #E8E4DD;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  border: white .3rem dashed;
+  position: relative;
+}
+
+.intro-second-para-container {
+  position: relative;
+  width: 60%;
+  margin-right: 5rem;
+}
+
+
+.intro-second-para-container p {
+  margin-bottom: 5rem;
+  word-spacing: .5rem;
+  letter-spacing: .2rem;
+  line-height: 3rem;
+  text-align: justify;
+}
+
+.second-page-img-container {
+  position: relative;
+}
+
+.second-page-img-container .firstimg {
+  width: 45%;
+  position: absolute;
+  top: -67px;
+  left: 5px;
+}
+
+.second-page-img-container .thirdimg {
+  width: 35%;
+  position: absolute;
+  top: -105px;
+  right: -135px;
+}
+
+.second-page-img-container .fourthimg {
+  width: 45%;
+  position: absolute;
+  top: 607px;
+  left: 400px;
+}
+
+.second-page-img-container .secondimg{
+  width: 80%;
+  position: absolute;
+  top: 570px;
+  left: -220px;
+}
+
+.intro-second-img-container img {
+  object-fit: cover;
+  aspect-ratio: 5/3.9;
+  width: 90%;
+  padding: 6rem;
+  border-radius: 8rem;
+}
+
+.intro-second-img-container  {
+  width: 100%;
+  border: #022954 .3rem dashed;
+}
+
+.intro-second-img-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.intro-next {
+  margin-left: 1rem;
+  cursor: pointer;
+}
 /* INTRO PAGE STYLES END */
