@@ -18,8 +18,8 @@ body {
 }
 
 @media only screen and (max-width: 720px) {
-  body{
-  font-size: 1.3rem;
+  body {
+    font-size: 1.3rem;
   }
 }
 
@@ -88,7 +88,8 @@ nav i {
 
 /* CONTENTS PAGE STYLES START */
 
-.contents-header, .intro-page-header {
+.contents-header,
+.intro-page-header {
   padding: 5rem;
   display: flex;
   justify-content: space-between;
@@ -114,7 +115,8 @@ nav i {
   width: 70rem;
 }
 
-.contents-header i, .intro-page-header  i {
+.contents-header i,
+.intro-page-header i {
   font-size: 4rem;
   color: #022954;
 }
@@ -136,7 +138,7 @@ nav i {
 /* INTRO PAGE STYLES START */
 
 .intro-page-header {
-  position: absolute; 
+  position: absolute;
   right: 0;
 }
 
@@ -194,18 +196,18 @@ nav i {
 }
 
 .page-active-block {
-display: none;
+  display: none;
 }
 
 .page-active-flex {
   display: flex;
 }
 
-.intro-second-para-container div > p:nth-child(2)  {
+.intro-second-para-container div>p:nth-child(2) {
   text-align: right;
 }
 
-.intro-second-para-container > div {
+.intro-second-para-container>div {
   background-color: #354C7C;
   color: #E8E4DD;
   width: 100%;
@@ -255,7 +257,7 @@ display: none;
   left: 400px;
 }
 
-.second-page-img-container .secondimg{
+.second-page-img-container .secondimg {
   width: 80%;
   position: absolute;
   top: 570px;
@@ -270,7 +272,7 @@ display: none;
   border-radius: 8rem;
 }
 
-.intro-second-img-container  {
+.intro-second-img-container {
   width: 100%;
   border: #022954 .3rem dashed;
 }
@@ -287,4 +289,179 @@ display: none;
   margin-left: 1rem;
   cursor: pointer;
 }
+
 /* INTRO PAGE STYLES END */
+
+
+/* HOBBIES PAGE STYLES START */
+
+.hobbies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: calc(100vh - 142px);
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.hobbies-wrapper {
+  width: 50rem;
+  cursor: pointer;
+
+}
+
+
+.hobbies-container .hobbie-img-container {
+  border: #697eac 1rem solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50rem;
+  border-radius: 1rem;
+}
+
+.star-container p {
+  margin-right: 2rem;
+  font-weight: bold;
+}
+
+.hobbie-img-container {
+  background-color: #354C7C;
+  object-fit: cover;
+  overflow: hidden;
+  transition: all .8s ease-in-out;
+}
+
+
+.mainBlur {
+  filter: blur(5px);
+}
+
+.hobbie-img-container:hover h1{
+  color: white;
+  font-size: 20rem;
+}
+
+.hobbie-img-container:hover {
+  transform: scale(1.05);
+  border: white 1rem solid;
+  box-shadow: 1rem 1rem 3rem #022954;
+}
+
+.hobbie-img-container img {
+  z-index: 1;
+  transition: all 1s ease-in-out;
+}
+
+.hobbie-img-container:hover img {
+  transform: scale(1.1);
+}
+
+.hobbie-img-container h1 {
+  color: #697eac;
+  position: absolute;
+  text-transform: uppercase;
+
+  top: 0px;
+  font-size: 9rem;
+  transition: all .7s ease-in-out;
+  white-space: nowrap;
+  display: block;
+}
+
+.star-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.reading-img {
+  position: absolute;
+  /* width: 68rem;
+  top: -13rem; */
+}
+
+.music-img {
+  position: absolute;
+  /* width: 78.4rem;
+  top: -29rem; */
+}
+
+.hobby-modal {
+  background-color: #354C7C;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 10rem;
+  margin: 5rem;
+  border-radius: 1rem;
+  width: 120rem;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -50%);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header i {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.modal-header i:hover {
+  color: #022954;
+}
+
+.modal-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hobby-modal h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.hobby-modal p {
+  font-size: 2.5rem;
+  max-width: 100rem;
+  padding: 5rem 5rem;
+  margin-bottom: 5rem;
+  word-spacing: .5rem;
+  letter-spacing: .2rem;
+  line-height: 3rem;
+  text-align: justify;
+
+}
+
+.modal-img-container {
+  border: #022954 .3rem dashed;
+}
+
+.modal-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30%;
+  background-color: #E8E4DD;
+}
+
+.modal-container {
+  display: flex;
+}
+
+/* HOBBIES PAGE STYLES END */
