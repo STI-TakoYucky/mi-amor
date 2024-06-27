@@ -67,18 +67,29 @@ hobbyContainer.addEventListener('click', (e) => {
             const modalHtml = displayModal(card.title, card.img, card.desc, card.link);
             body.insertAdjacentHTML('beforeend', modalHtml);
             hobbyContainer.classList.add("mainBlur");
+
+            const modalExit = document.getElementById("modal-exit-bttn");
+
+            modalExit.addEventListener('click', () => {
+                const modal = document.querySelector(".hobby-modal");
+                hobbyContainer.classList.remove("mainBlur");
+                body.removeChild(modal);
+            });
         }
     } else {
         console.log("Clicked element is not a hobby image");
     }
 });
 
+
+
 function displayModal(title, img, desc, link) {
+    
     return `<article class="hobby-modal">
         <div>
             <div class="modal-header">
                 <h1>${title}</h1>
-                <i class="fa-solid fa-circle-xmark"></i>
+                <i class="fa-solid fa-circle-xmark" id="modal-exit-bttn"></i>
             </div>
             <div class="modal-container">
                 <div class="modal-img-container"><img src="${img}" alt=""></div>
@@ -90,3 +101,4 @@ function displayModal(title, img, desc, link) {
         </div>
     </article>`;
 }
+
