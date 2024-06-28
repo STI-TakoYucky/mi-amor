@@ -35,10 +35,6 @@ body {
 }
 
 @media only screen and (max-width: 425px) {
-  body {
-    font-size: 1rem;
-  }
-
 
 }
 
@@ -310,16 +306,7 @@ nav i {
   text-align: center;
 }
 
-@media only screen and (max-width: 762px) {
 
-  .secondpage {
-    padding: 10rem 0 0 0rem;
-    overflow-x: hidden;
-  }
-  .intro-second-para-container {
-    width: 90%;
-  }
-}
 
 .intro-second-img-container div {
   display: flex;
@@ -332,6 +319,36 @@ nav i {
 .intro-next {
   margin-left: 1rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 762px) {
+
+  .secondpage {
+    padding: 5rem 0 0 0rem;
+    overflow-x: hidden;
+  }
+  .intro-second-para-container {
+    width: 90%;
+
+  }
+
+  .intro-second-img-container {
+    width: 90%;
+    z-index: 2000;
+    background-color: #E8E4DD;
+  }
+
+  
+  .intro-image-container {
+    padding: 2rem;
+  }
+  .intro-para-container {
+    padding: 5rem;
+  }
+
+  .intro-para-container h1 {
+    font-size: 4rem;
+  }
 }
 
 /* INTRO PAGE STYLES END */
