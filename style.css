@@ -32,6 +32,13 @@ body {
   .hero-img {
     height: 40rem;
   }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 1rem;
+  }
+
 
 }
 
@@ -148,54 +155,65 @@ nav i {
 
 /* INTRO PAGE STYLES START */
 
+.intro-wrapper {
+  height: 100vh;
+}
+
 .intro-page-header {
-  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   right: 0;
 }
 
 .intro-pages-container {
-  width: 100vw;
-  display: flex;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .intro-image-container {
   position: relative;
+  padding: 15rem 10rem 0 10rem;
+  
 }
 
 .intro-image-container img {
-  height: 116vh;
-  object-fit: cover;
-  width: 90rem;
-  object-position: -5rem;
-  padding-right: 5rem;
-  padding-left: 20rem;
-  border-right: .5rem dashed #022954;
+  border-radius: 1rem;
+  width: 100%;
 }
 
 .intro-image-container p {
   position: absolute;
-  top: 50rem;
-  left: -16rem;
+  top: 45rem;
+  left: -22rem;
   text-transform: uppercase;
   font-style: italic;
   transform: rotate(-90deg);
   display: block;
   letter-spacing: 1rem;
+  word-wrap: nowrap;
+  
 }
 
 .intro-para-container {
   padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-para-container h1 {
-  font-size: 18rem;
+  font-size: 9rem;
   text-transform: uppercase;
 }
 
 .intro-para-container p {
   text-align: justify;
+  max-width: 100rem;
   font-size: 2.5rem;
-  width: 70rem;
   line-height: 5rem;
 }
 
@@ -203,7 +221,8 @@ nav i {
   display: none;
   height: 100vh;
   padding: 9rem;
-  display: none;
+  align-items: center;
+  flex-direction: column;
 }
 
 .page-active-block {
@@ -212,10 +231,8 @@ nav i {
 
 .page-active-flex {
   display: flex;
-}
-
-.intro-second-para-container div>p:nth-child(2) {
-  text-align: right;
+  flex-direction: column;
+  
 }
 
 .intro-second-para-container>div {
@@ -231,9 +248,8 @@ nav i {
 .intro-second-para-container {
   position: relative;
   width: 60%;
-  margin-right: 5rem;
+  z-index: 1000;
 }
-
 
 .intro-second-para-container p {
   margin-bottom: 5rem;
@@ -248,44 +264,61 @@ nav i {
 }
 
 .second-page-img-container .firstimg {
-  width: 45%;
+  width: 30rem;
   position: absolute;
-  top: -67px;
-  left: 5px;
+  top: -185px;
+  left: -225px;
+  z-index: -1000;
 }
 
 .second-page-img-container .thirdimg {
-  width: 35%;
+  width: 20rem;
   position: absolute;
-  top: -105px;
-  right: -135px;
+  top: -125px;
+  right: -175px;
+  z-index: -1000;
 }
 
 .second-page-img-container .fourthimg {
-  width: 45%;
+  width: 30rem;
   position: absolute;
-  top: 607px;
-  left: 400px;
+  top: 357px;
+  right: -200px;
+  z-index: -1000;
 }
 
 .second-page-img-container .secondimg {
-  width: 80%;
+  width: 25rem;
   position: absolute;
-  top: 570px;
-  left: -220px;
+  top: 370px;
+  z-index: -1000;
+  left: -180px;
 }
 
 .intro-second-img-container img {
   object-fit: cover;
   aspect-ratio: 5/3.9;
-  width: 90%;
-  padding: 6rem;
-  border-radius: 8rem;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 4rem;
 }
 
 .intro-second-img-container {
-  width: 100%;
+  width: 50%;
+  margin-bottom: 5rem;
   border: #022954 .3rem dashed;
+  text-align: center;
+}
+
+@media only screen and (max-width: 762px) {
+
+  .secondpage {
+    padding: 10rem 0 0 0rem;
+    overflow-x: hidden;
+  }
+  .intro-second-para-container {
+    width: 90%;
+  }
 }
 
 .intro-second-img-container div {
@@ -313,7 +346,6 @@ nav i {
   gap: 5rem;
   height: calc(100vh - 142px);
   flex-wrap: wrap;
-
 }
 
 .hobbies-wrapper {
@@ -321,6 +353,8 @@ nav i {
   cursor: pointer;
 
 }
+
+
 
 
 .hobbies-container .hobbie-img-container {
@@ -420,6 +454,7 @@ nav i {
   transform: translate(-53%, -50%);
 }
 
+
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -429,6 +464,7 @@ nav i {
 .modal-header i {
   font-size: 4rem;
   cursor: pointer;
+  margin-bottom: 5rem;
 }
 
 .modal-header i:hover {
@@ -444,7 +480,6 @@ nav i {
 .hobby-modal h1 {
   font-size: 4rem;
   text-transform: uppercase;
-  margin-bottom: 2rem;
 }
 
 .hobby-modal p {
@@ -476,6 +511,30 @@ nav i {
 .modal-container {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 500px) {
+  .hobbies-wrapper {
+    width: 30rem;
+  }
+
+  .hobby-modal {
+    min-width: 30rem;
+    margin: 0;
+  }
+
+  .hobby-modal p {
+    font-size: 1.3rem;
+    padding: .5rem;
+  }
+
+  .hobby-modal h1 {
+    font-size: 3rem;
+  }
+
+  .hobby-modal i {
+    font-size: 3rem;
+  }
 }
 
 /* HOBBIES PAGE STYLES END */
