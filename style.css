@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Paytone+One&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   font-size: 10px;
+
+  --header1: 'Paytone One';
+  --header2: 'Libre Baskerville';
+  --contents-font: 'Acme';
+  --text: 'Public Sans';
 }
 
 *,
@@ -10,11 +17,19 @@
   box-sizing: border-box;
 }
 
+.header1 {
+  font-family: var(--header1);
+}
+
+.header2 {
+  font-family: var(--header2);
+}
+
 body {
   font-size: 1.8rem;
   color: #022954;
   background-color: #E8E4DD;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--text);
 }
 
 @media only screen and (max-width: 762px) {
@@ -49,7 +64,9 @@ body {
   border-radius: 1rem;
 }
 
-nav {
+
+
+.desktop-nav {
   padding: 5rem 5rem 2rem 5rem;
 }
 
@@ -69,6 +86,14 @@ a {
   
 nav i {
   margin-left: .53rem;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.home-page-menu {
+  visibility: hidden;
 }
 
 .title-container {
@@ -131,7 +156,7 @@ nav i {
 
 .contents-header i,
 .intro-page-header i {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #022954;
 }
 
@@ -139,6 +164,7 @@ nav i {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--contents-font);
 }
 
 .contents-container img {
@@ -356,6 +382,62 @@ white-space: nowrap;
 
   .intro-para-container h1 {
     font-size: 4rem;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+  .title-container {
+    margin-top: 5rem;
+  }
+
+  .mobile-nav i {
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    position: relative;
+    top:-23rem;
+    right: -23rem;
+  }
+  
+  .mobile-nav {
+    position: absolute;
+    background-color: #022954;
+    left: 50%;
+    top: -1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    transform: translate(-50%);
+    padding: 0 10rem !important;
+    transition: all 1s ease-in-out;
+  }
+  
+  .activeMenu {
+    display: flex;
+    top: 0px;
+  }
+  
+  .mobile-nav a, .mobile-nav li {
+    color: white;
+    margin-block: 3rem;
+    font-size: 2rem;
+  }
+  
+  .home-page-menu {
+    position: fixed;
+    font-size: 3rem;
+    color: white;
+    background-color: #022954;
+    padding: 2rem 2rem 2rem 3rem;
+    border-radius: 0 50% 50% 0;
+    left: -20px;
+    top: 30rem;
+    cursor: pointer;
+    visibility: visible;
   }
 }
 
@@ -584,6 +666,7 @@ white-space: nowrap;
 .inspi-img-container img {
   max-width: inherit;
   width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
@@ -594,7 +677,9 @@ white-space: nowrap;
   padding: 1rem;
   border: #697eac .5rem dashed;
   border-radius: 50%;
+  aspect-ratio: 1/1;
   width: 100%;
+  margin-bottom: 5rem;
 }
 
 .inspi-desc-container p {
