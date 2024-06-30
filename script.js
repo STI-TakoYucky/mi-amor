@@ -29,7 +29,7 @@ try {
             title: "Reading",
             img: "/images/h2.png",
             desc: "Reading stories is my favorite thing to do whether I am busy or not. I read stories every day. It started when the pandemic happened.",
-            link: "my reading list:"
+            link: `<a style="color: white;"href ="https://docs.google.com/spreadsheets/d/1uiSSZt4o5iBM42Zy9quyN8ZkQDljlXsxzLwmgexwnNQ/edit?usp=drivesdk" target="_blank">Click here for my reading list</a>`
         },
         {
             title: "Watching",
@@ -41,7 +41,7 @@ try {
             title: "Listening Music!!",
             img: "/images/h1.png",
             desc: "Music is my comfort. It makes my heart happy.",
-            link: "my playlist:"
+            link: `<a style="color: white;"href ="https://open.spotify.com/user/31x46idoytair5s2fm57xjlv3ueq?si=2bttEogjTMOnwCLlght5AQ" target="_blank">Click here for my playlist</a>`
         }
     ];
     
@@ -135,7 +135,7 @@ try {
     
 }
 
-const preloader = document.querySelector('.preloader');
+const preloader = document.querySelector('.preloader-container');
 
 window.addEventListener("load", () => {
     setTimeout(() => {
