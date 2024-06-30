@@ -76,6 +76,21 @@ nav ul {
   justify-content: space-between;
 }
 
+nav a::after{
+  content: "";
+  display: block;
+  width: 0%;
+  height: .5rem;
+  background-color: #022954;
+  color: white;
+  border-radius: 1rem;
+  transition: all .5s ease-in-out;
+}
+
+nav a:hover::after{
+  width: 100%;
+}
+
 nav li,
 a {
   display: inline;
