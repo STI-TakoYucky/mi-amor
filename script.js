@@ -134,3 +134,17 @@ try {
 } catch (err) {
     
 }
+
+const preloader = document.querySelector('.preloader');
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+   
+        preloader.classList.add("hide-preloader")
+        
+    }, 2000);
+
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 3000);
+})

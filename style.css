@@ -112,6 +112,18 @@ nav i {
   letter-spacing: 1rem;
 }
 
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease-in;
+}
+
+.hide-preloader {
+  opacity: 0;
+}
+
 /* .subtitle-container p {
     background-color: white;
     padding: 2rem 3rem;
@@ -646,18 +658,26 @@ white-space: nowrap;
 /* HOBBIES PAGE STYLES END */
 
 
+.inspi-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+
+}
+
 .inspi-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #022954;
+  background-color: #354C7C;
   padding: 7rem;
   margin-block: 5rem;
-  max-width: 80rem;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 70rem;
+  width: 80rem;
   margin-right: 5rem;
   color: white;
   border-radius: 1rem;
@@ -673,7 +693,7 @@ white-space: nowrap;
 }
 
 .inspi-img-container {
-  max-width: 35rem;
+  max-width: 30rem;
   padding: 1rem;
   border: #697eac .5rem dashed;
   border-radius: 50%;
@@ -778,14 +798,14 @@ white-space: nowrap;
 
 
 .blob-container img {
-  width: 130%;
+  width: 160%;
 }
 
 
 .blob-container {
   position: fixed;
-  top: -20rem;
-  left:-10rem;
+  top: -35rem;
+  left:-35rem;
   transform: rotate(95deg);
   z-index: -10000;
   width: 50rem;
@@ -849,4 +869,84 @@ white-space: nowrap;
     flex-direction: column;
     height: 100%;
   }
+}
+
+.contacts-page {
+  height: calc(100vh - 250px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-container h1 {
+  font-size: clamp(2rem, 5vw, 9rem);
+  text-transform: uppercase;
+  letter-spacing: 1.3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+
+.contacts-container h1::after {
+  content: '';
+  background-color: #8599BA;
+  width: 70%;
+  height: .5rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-links li {
+  font-size: 4rem;
+  margin-top: 1rem;
+  transition: all .3s ease-in-out;
+  margin-inline: 1.8rem;
+}
+
+.contact-links li a:hover, .contact-links li:hover {
+  color: #354C7C;
+  transform: scale(1.2);
+}
+
+.contacts-email i {
+  position: relative;
+  top: 3px;
+}
+
+.contacts-email {
+  font-size: 2.3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-self: center;
+}
+
+
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-links ul {
+  display: flex;
+}
+
+.contact-links ul li {
+  display: inline;
+}
+
+.contacts-header {
+  justify-content: flex-end;
+}
+
+.contacts-img {
+  width: 20rem;
+  border-radius: 50%;
 }
